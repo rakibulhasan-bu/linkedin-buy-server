@@ -11,6 +11,18 @@ const PricingValidationSchema = z.object({
   }),
 });
 
+const updatePricingValidationSchema = z.object({
+  body: z.object({
+    sharePrize: z.number().optional(),
+    connectionPrize: z.number().optional(),
+    followersPrize: z.number().optional(),
+    commentsPrize: z.number().optional(),
+    reactionsPrize: z.number().optional(),
+    likesPrize: z.number().optional(),
+  }),
+});
+
 export const pricingValidation = {
   PricingValidationSchema,
+  updatePricingValidationSchema,
 };

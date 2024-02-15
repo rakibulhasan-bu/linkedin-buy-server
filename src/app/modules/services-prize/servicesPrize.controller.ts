@@ -14,6 +14,19 @@ const createPricing = CatchAsyncError(async (req: Request, res: Response) => {
   });
 });
 
+const updatePricing = CatchAsyncError(async (req: Request, res: Response) => {
+  const servicePrice = req.body;
+  const { id } = req.params;
+
+  const result = await pricingServices.updatePricingIntoDB(id, servicePrice);
+  res.status(201).json({
+    success: true,
+    statusCode: 201,
+    message: "Services Pricing updated successfully",
+    data: result,
+  });
+});
+
 const getAllServicePrice = CatchAsyncError(
   async (req: Request, res: Response) => {
     const result = await pricingServices.getAllPricingFromDB();
@@ -28,5 +41,6 @@ const getAllServicePrice = CatchAsyncError(
 
 export const pricingController = {
   createPricing,
+  updatePricing,
   getAllServicePrice,
 };

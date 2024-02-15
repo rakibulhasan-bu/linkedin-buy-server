@@ -14,6 +14,13 @@ servicePriceRoute.post(
   pricingController.createPricing,
 );
 
+servicePriceRoute.patch(
+  "/services-price/:id",
+  // auth(USER_ROLE.admin),
+  validateRequest(pricingValidation.updatePricingValidationSchema),
+  pricingController.updatePricing,
+);
+
 servicePriceRoute.get("/services-price", pricingController.getAllServicePrice);
 
 export default servicePriceRoute;
