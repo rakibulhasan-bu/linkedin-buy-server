@@ -1,8 +1,8 @@
 export interface TPricing {
-  sharePrize: number;
-  connectionPrize: number;
-  followersPrize: number;
-  commentsPrize: number;
-  reactionsPrize: number;
-  likesPrize: number;
+  sharePrize: string;
+  connectionPrize: string;
+  followersPrize: string;
+  commentsPrize: string;
+  reactionsPrize: string;
+  likesPrize: string;
 }

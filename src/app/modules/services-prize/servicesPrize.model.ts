@@ -3,12 +3,12 @@ import { TPricing } from "./servicesPrize.interface";
 
 const pricingSchema = new Schema<TPricing>(
   {
-    sharePrize: { type: Number, required: true },
-    connectionPrize: { type: Number, required: true },
-    followersPrize: { type: Number, required: true },
-    commentsPrize: { type: Number, required: true },
-    reactionsPrize: { type: Number, required: true },
-    likesPrize: { type: Number, required: true },
+    sharePrize: { type: String, required: true },
+    connectionPrize: { type: String, required: true },
+    followersPrize: { type: String, required: true },
+    commentsPrize: { type: String, required: true },
+    reactionsPrize: { type: String, required: true },
+    likesPrize: { type: String, required: true },
   },
   { timestamps: true },
 );
