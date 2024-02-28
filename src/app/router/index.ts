@@ -5,6 +5,7 @@ import authRoute from "../modules/auth/auth.route";
 import servicePriceRoute from "../modules/services-prize/servicesPrize.route";
 import orderServicesRoute from "../modules/order-services/orderServices.route";
 import zeroConnectionPrizeRoute from "../modules/zero-connection-prize/zeroConnectionPrize.route";
+import organicPrizeRoute from "../modules/organic-price/organicPrice.route";
 
 const router = Router();
 
@@ -20,6 +21,10 @@ const moduleRoutes = [
   {
     path: "/",
     route: zeroConnectionPrizeRoute,
+  },
+  {
+    path: "/",
+    route: organicPrizeRoute,
   },
   {
     path: "/",
